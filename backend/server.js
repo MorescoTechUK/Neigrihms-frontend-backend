@@ -6,18 +6,21 @@ const cors = require("cors")
 
 connectDb();
 
-// const corsOptions = {
-//     origin:"http://localhost:5173"
-// }
+const corsOptions = {
+    origin:"http://localhost:5173"
+}
 
 const app = express();
-app.use(cors())
+app.use(cors(corsOptions))
 
 const port = process.env.PORT || 5000  ;
 
 app.use(express.json());
 // app.use("/api/contacts", require("./routes/contactRoutes"));
 // app.use("/api/users", require("./routes/userRoutes"));
+app.get('/', (req, res) => {
+    res.send("Welcome to backend")
+})
 app.use("/api/patient", require("./routes/patientRoutes"));
 app.use(errorHandler);
 
