@@ -15,7 +15,7 @@ const LoginPage = ({ token }) => {
     const [details, setdetails] = useState({})
 
     useEffect(() => {
-        axios.get('https://neigrihms.onrender.com/api/patient/current', config)
+        axios.get('http://localhost:5001/api/patient/current', config)
             .then(data => {
                 console.log(data.data)
                 setdetails(data.data)
