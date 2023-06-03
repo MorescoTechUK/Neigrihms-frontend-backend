@@ -1,0 +1,23 @@
+.widget {
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    /* padding: 20px; */
+    border:1px white;
+    border-radius: 1rem;
+}
+
+.widget:hover{
+    transform: scale(1.2);
+    transition: 0.7s;
+}
+
+.widget a h5{
+    font-size: 16px;
+    padding-top: 1.5rem;
+    
+}
+
+.widget a{
+    text-decoration: none;
+    color: black;
+}

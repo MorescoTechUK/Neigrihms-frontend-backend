@@ -1,0 +1,32 @@
+*{
+    font-family: sans-serif;
+}
+.emergency {
+    padding: 0.5rem;
+    border: 2px solid #007C9D;
+    border-radius: 30px;
+}
+
+.lifeline {
+    padding: 0.5rem;
+    border: 2px solid #007C9D;
+    border-radius: 30px;
+}
+
+hr{
+    width: 80%;
+    margin: auto;
+}
+
+.loginsignup{
+    margin: auto;
+        padding: 0.5rem;
+        border: 2px solid #007C9D;
+        border-radius: 30px;
+        
+}
+
+.loginsignup:hover{
+    background-color: rgb(235, 251, 245);
+color: black;
+}

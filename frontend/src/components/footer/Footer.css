@@ -1,0 +1,9 @@
+  .foo {
+      color: #fff;
+      background: #060822;
+  }
+
+  .foo a {
+      color: white;
+      opacity: 0.5;
+  }
