@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactSearchBox from "react-search-box";
 import PhoneIcon from '@mui/icons-material/Phone';
 import './Navbar.css'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -62,8 +63,8 @@ const Navbar = () => {
                             <p className="fw-bold " style={{ textAlign: "center", margin: "0.2rem" }}>Lifeline</p>
                             <div className="lifeline "><PhoneIcon />1860-500-1066</div>
                         </div>
-                        <button className="loginsignup" style={{marginRight:'0px'}}>Log In</button>
-                        <button className=" loginsignup" style={{ marginLeft: '0.5rem' }}>Sign Up</button>
+                        <Link to="/Hospital/login" className="loginsignup" style={{marginRight:'0px'}}><a></a>Log In</Link>
+                        <Link to="/Hospital/signup" className=" loginsignup" style={{ marginLeft: '0.5rem' }}>Sign Up</Link>
 
 
                     </div>

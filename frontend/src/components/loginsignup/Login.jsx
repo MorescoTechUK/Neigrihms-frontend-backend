@@ -38,12 +38,14 @@ const Login = () => {
         console.log(err)
       })
 
-    { token && <LoginPage token={token} /> }
+    
   }
 
   return (
     <>
-      {token!=="" ? <LoginPage token={token} /> :
+      {token !== "" ? 
+        < LoginPage token={token} />
+       :
         <section className="vh-100">
           <div className="container-fluid h-custom">
             <div className="row d-flex justify-content-center align-items-center h-100">

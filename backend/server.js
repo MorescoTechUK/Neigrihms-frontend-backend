@@ -5,6 +5,11 @@ const dotenv = require("dotenv").config();
 const cors = require("cors")
 
 connectDb();
+
+// const corsOptions = {
+//     origin:"http://localhost:5173"
+// }
+
 const app = express();
 app.use(cors())
 

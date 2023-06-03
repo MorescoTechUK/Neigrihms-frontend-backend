@@ -11,7 +11,7 @@ import InternationalPatient from './components/internationalpatients/Internation
 import WhatsNew from './components/whatsnew/WhatsNew'
 import Disclaimer from './components/disclaimer/Disclaimer'
 import Footer from './components/footer/Footer'
-// import Login  from './components/loginsignup/Login'
+import Login  from './components/loginsignup/Login'
 // import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Signup  from './components/loginsignup/signup'
@@ -23,24 +23,25 @@ const App = () => {
       <Router>
         <Routes>
           <Route exact path='/Hospital/' element={[
-            // <NavbarTop />,
-            // <Navbar />,
-            // <Options />,
-            // <StaticImage />,
-            // <TopWidgets />,
-            // <Specialities />,
-            // <ChooseHealthcare />,
-            // <HospitalsIndia />,
-            // <InternationalPatient />,
-            // <WhatsNew />,
-            // <Disclaimer />,
+            <NavbarTop />,
+            <Navbar />,
+            <Options />,
+            <StaticImage />,
+            <TopWidgets />,
+            <Specialities />,
+            <ChooseHealthcare />,
+            <HospitalsIndia />,
+            <InternationalPatient />,
+            <WhatsNew />,
+            <Disclaimer />,
 
-            // <Footer />
-            // <Login/>
-            <Signup/>
+            <Footer />
+            
+            
           ]}/>
-          <Route exact path='/Hospital/login' element={ <LoginPage/>} />
-          {/* <Route exact path='/Hospital/login'/> */}
+          <Route exact path='/Hospital/login' element={ <Login/>} />
+          <Route exact path='/Hospital/signup' element={ <Signup/>} />
+          <Route exact path='/Hospital/patient' element={ <LoginPage/>} />
         </Routes>
       </Router>
 
