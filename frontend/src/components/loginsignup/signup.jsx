@@ -57,7 +57,7 @@ const Signup = () => {
         e.preventDefault();
         console.log(registerbodyParameters)
 
-        axios.post('http://localhost:5001/api/patient/register', registerbodyParameters)
+        axios.post('https://neigrihms.onrender.com/api/patient/register', registerbodyParameters)
             .then(data => {
                 console.log(data)
                 setvalidregis(true)
@@ -68,7 +68,7 @@ const Signup = () => {
             })
 
         {
-            validregis && axios.post('http://localhost:5001/api/patient/login', loginbodyParameters)
+            validregis && axios.post('https://neigrihms.onrender.com/api/patient/login', loginbodyParameters)
                 .then(data => {
                     settoken(data.data.accessToken)
 

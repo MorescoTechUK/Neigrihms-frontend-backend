@@ -29,7 +29,7 @@ const Login = () => {
 
   const handleSubmit = () => {
     console.log(JSON.stringify(jsonData))
-    axios.post('http://localhost:5001/api/patient/login', bodyParameters)
+    axios.post('https://neigrihms.onrender.com/api/patient/login', bodyParameters)
       .then(data => {
         settoken(data.data.accessToken)
 
