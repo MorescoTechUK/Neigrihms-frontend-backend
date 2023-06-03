@@ -7,7 +7,7 @@ const cors = require("cors")
 connectDb();
 
 const corsOptions = {
-    origin: "https://neigrihms-hospital-o3vd.onrender.com"
+    origin:"http://localhost:5173"
 }
 
 const app = express();
