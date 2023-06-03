@@ -15,12 +15,12 @@ const Footer = () => {
                           <div className="response-n"></div>
                           <p></p>
                       </div>
-                      <form id="form-subscribe-news-letter">
+                      {/* <form id="form-subscribe-news-letter">
                           <div className="mb-3">
                               <input type="email" className="form-control" id="userEmail" name="email" placeholder="Enter your email id" /><textarea id="pageURL" style={{ display: "none" }} name="page">https://www.hospitals.com</textarea>
                           </div>
                           <p><button type="submit" className="btn btn-primary w-100 ft-btn" id="btn-subscribe-newsletter">Submit</button></p>
-                      </form>
+                      </form> */}
                       <div className="row mt-3 mt-lg-5 helplineno row-cols-3">
                           <div className="col-sm-12">
                               <div className="d-flex">
