@@ -15,6 +15,7 @@ import Login  from './components/loginsignup/Login'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Signup  from './components/loginsignup/signup'
 import LoginPage from './components/loginsignup/LoginPage'
+import Logindummy from './Logindummy'
 
 const App = () => {
   return (
@@ -35,12 +36,15 @@ const App = () => {
             <Disclaimer />,
 
             <Footer />
+
+
             
             
           ]}/>
           <Route exact path='/Hospital/login' element={ <Login/>} />
           <Route exact path='/Hospital/signup' element={ <Signup/>} />
           <Route exact path='/Hospital/patient' element={ <LoginPage/>} />
+          <Route exact path='/Hospital/demo' element={ <Logindummy/>} />
         </Routes>
       </Router>
 

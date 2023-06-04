@@ -8,8 +8,8 @@ const Patient = require("../models/patientModel");
 //@route POST /api/users/register
 //@access public
 const registerUser = asyncHandler(async (req, res) => {
-    const { firstName, middleName, lastName, email, password, phone, gender, height, weight, bloodGrp, location } = req.body;
-    if (!firstName || !phone || !email || !password || !gender || !height || !weight || !location || !bloodGrp) {
+    const { firstName, email, password  } = req.body;
+    if (!firstName  || !email || !password ) {
         res.status(400);
         throw new Error("All fields are mandatory!");
     }
@@ -33,11 +33,7 @@ const registerUser = asyncHandler(async (req, res) => {
     // })
     const patient = await Patient.create({
         firstName,
-        middleName,
-        lastName,
         email,
-        phone, gender, height, weight, bloodGrp, location,
-
         password: hashedPassword,
     });
 
@@ -68,15 +64,9 @@ const loginUser = asyncHandler(async (req, res) => {
                 patient: {
                     id: patient.id,
                     firstName: patient.firstName,
-                    middleName: patient.middleName,
-                    lastName: patient.lastName,
+                    
                     email: patient.email,
-                    phone: patient.phone,
-                    gender: patient.gender,
-                    height: patient.height,
-                    weight: patient.weight,
-                    bloodGrp: patient.bloodGrp,
-                    location: patient.location,
+                    
                 },
             },
             process.env.ACCESS_TOKEN_SECERT,
