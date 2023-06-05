@@ -13,6 +13,37 @@ const registerUser = asyncHandler(async (req, res) => {
         res.status(400);
         throw new Error("All fields are mandatory!");
     }
+    // Patient.schema.path('email').validate(function (value, respond) {
+    //     User.findOne({ email }, function (err, user) {
+    //         if (err) console.log( err);
+    //         if (user) return respond(false);
+    //         respond(true);
+    //     });
+    // }, 'exists');
+    const pat = new Patient();
+    pat.firstName = firstName;
+    pat.email = email;
+    pat.password=password ;
+
+    let error="";
+    try {
+        await pat.validate();
+    } catch (err) {
+        console.log(err.message.split(":")[2])
+        error = err;
+    }
+    // assert.equal(error.errors['email'].message,"Please fill a valid email address")
+
+// assert.ok(error)
+    
+    if (error)
+    {
+        res.status(400);
+        throw new Error(error.message.split(": ")[2])
+        }
+    
+
+
     const userAvailable = await Patient.findOne({ email });
     if (userAvailable) {
         res.status(400);
